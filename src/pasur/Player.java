@@ -13,6 +13,7 @@ import java.util.*;
 public abstract class Player
 {
     private static final int TARGET_VALUE = 11;
+    // get instance from Log.java
     private Log log = Log.getInstance();
     protected int id;
     protected Hand hand;

@@ -38,6 +38,7 @@ public class Pasur
     private Hand deckHand;
     private final Hand poolHand;
     private final Player[] players;
+    // get instance from Log.java
     private Log log = Log.getInstance();
     private PropertyChangeSupport propertyChangePublisher = new PropertyChangeSupport(this);
 

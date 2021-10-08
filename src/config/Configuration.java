@@ -16,6 +16,7 @@ public class Configuration
     private boolean animate;
     private String player0class;
     private String player1class;
+    // get instance from Log.java
     private Log log = Log.getInstance();
 
     public static Configuration getInstance()
@@ -49,6 +50,8 @@ public class Configuration
                 inStream.close();
             }
         }
+        // writting information start from here
+        // create new .log file used to stored log
         log.createLog();
         // Seed
         seed = Integer.parseInt(properties.getProperty(SEED_KEY));
