@@ -17,13 +17,6 @@ public class Score {
         this.cards = c;
     }
 
-    public void print(){
-        for(int i = 0; i < cards.size(); i++){
-            System.out.print(Pasur.toString(cards.get(i)) + " ");
-
-        }
-        System.out.println();
-    }
 
     public void UpdateCards(List<Card> c){
         for(int i = 0 ; i < c.size(); i++){
@@ -40,13 +33,19 @@ public class Score {
             if(cards.get(i).getSuit() == Suit.DIAMONDS && cards.get(i).getValue() ==10 ){
                 score += 3;
                 cards.remove(i);
+                i = 0;
             }else if(cards.get(i).getSuit() == Suit.CLUBS && cards.get(i).getValue() ==2){
                 score += 2;
                 cards.remove(i);
                 count ++;
+                i =0;
             }else if(cards.get(i).getValue() == 1 || cards.get(i).getValue() == 11){
                 score += 1;
+                if(cards.get(i).getSuit() == Suit.CLUBS){
+                    count++;
+                }
                 cards.remove(i);
+                i = 0;
             }
 
         }

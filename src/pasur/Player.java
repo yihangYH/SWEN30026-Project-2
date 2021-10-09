@@ -84,6 +84,8 @@ public abstract class Player
             {
                 cardsToPick.add(candidateCardToPick);
                 pickedCard.add(candidateCardToPick);
+                pickedCard.add(playedCard);
+                score.UpdateCards(pickedCard);
             }
         }else
         {
@@ -243,6 +245,7 @@ public abstract class Player
         
         return score.getScore();
     }
-
+    
+    
     abstract Card selectToPlay();
 }

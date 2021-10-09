@@ -231,9 +231,10 @@ public class Pasur
                         k++;
                         if(k == nPlayers)
                             k = 0;
-
+                        
                         updateScores();
                     }
+                    
                 }
 
                 if(isLastRound)
@@ -242,6 +243,7 @@ public class Pasur
 
                     List<Card> poolCards = poolHand.getCardList();
                     if(!poolCards.isEmpty())
+                        lastPlayerWhoPickedAcard.score.UpdateCards(poolCards);
                         log.writeToLog(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game\n");
                         System.out.println(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game");
 
