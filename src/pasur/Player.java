@@ -19,7 +19,7 @@ public abstract class Player
     protected Hand hand;
     protected Hand pickedCards;
     protected Hand surs;
-
+    protected Score score = new Score();
     protected Player(int id)
     {
         this.id = id;
@@ -47,7 +47,7 @@ public abstract class Player
     protected Set<Card> pickCards(Hand pool, Card playedCard)
     {
         List<Card> poolCards = pool.getCardList();
-
+        List<Card> pickedCard = new ArrayList<>();
         Set<Card> cardsToPick = new HashSet<>();
         if(playedCard.getRank() == Rank.JACK)
         {
@@ -58,8 +58,11 @@ public abstract class Player
                 {
                     // a jack picks any card except kings and queens
                     cardsToPick.add(card);
+                    pickedCard.add(card);
                 }
             }
+            pickedCard.add(playedCard);
+            score.UpdateCards(pickedCard);
         }else if(playedCard.getRank() == Rank.KING || playedCard.getRank() == Rank.QUEEN)
         {
             Card candidateCardToPick = null;
@@ -80,6 +83,7 @@ public abstract class Player
             if(candidateCardToPick != null)
             {
                 cardsToPick.add(candidateCardToPick);
+                pickedCard.add(candidateCardToPick);
             }
         }else
         {
@@ -95,11 +99,14 @@ public abstract class Player
                     for(Card card : bestSet)
                     {
                         cardsToPick.add(card);
+                        pickedCard.add(card);
                     }
+                    pickedCard.add(playedCard);
+                    score.UpdateCards(pickedCard);
                 }
             }
         }
-
+        
         return cardsToPick;
     }
 
@@ -233,7 +240,8 @@ public abstract class Player
 
     public int getScore()
     {
-        return 0;
+        
+        return score.getScore();
     }
 
     abstract Card selectToPlay();

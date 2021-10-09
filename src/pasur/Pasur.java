@@ -185,7 +185,7 @@ public class Pasur
                                 // otherwise it will be added as a sur for this player
                                 log.writeToLog(player.toString() + " scores a sur\n");
                                 System.out.println(player.toString() + " scores a sur");
-
+                                player.score.sur();
                                 int nOtherPlayersWithSure = 0;
                                 for(int r = 0; r < nPlayers; r++)
                                 {
@@ -206,6 +206,7 @@ public class Pasur
                                             Card surCard = otherPlayer.getSurs().get(otherPlayer.getSurs().getNumberOfCards() - 1);
                                             cardList.clear();
                                             cardList.add(surCard);
+                                            player.score.offset();
                                             transfer(cardList, otherPlayer.getPickedCards(), false);
                                             surCard.setVerso(true);
                                         }
@@ -256,7 +257,7 @@ public class Pasur
                         card.setVerso(true);
                     }
                     transfer(cardList, lastPlayerWhoPickedAcard.getPickedCards(), false);
-                    log.closeLog();
+                    
                 }
             }
 
@@ -308,6 +309,7 @@ public class Pasur
 
         propertyChangePublisher.firePropertyChange(ON_GAME_END, null, winningText);
         log.writeToLog(winningText + "\n");
+        log.closeLog();
         System.out.println(winningText);
         
     }
