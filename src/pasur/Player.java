@@ -49,6 +49,7 @@ public abstract class Player
         List<Card> poolCards = pool.getCardList();
         List<Card> pickedCard = new ArrayList<>();
         Set<Card> cardsToPick = new HashSet<>();
+        boolean check = false;
         if(playedCard.getRank() == Rank.JACK)
         {
             for(int i = 0, len = poolCards.size(); i < len; i++)
@@ -59,9 +60,12 @@ public abstract class Player
                     // a jack picks any card except kings and queens
                     cardsToPick.add(card);
                     pickedCard.add(card);
+                    check = true;
                 }
             }
-            pickedCard.add(playedCard);
+            if(check){
+                pickedCard.add(playedCard);
+            }
             score.UpdateCards(pickedCard);
         }else if(playedCard.getRank() == Rank.KING || playedCard.getRank() == Rank.QUEEN)
         {

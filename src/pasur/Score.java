@@ -101,12 +101,23 @@ public class Score {
         for(int i = 0 ; i < cards.size(); i++){
             if(cards.get(i).getSuit() != Suit.CLUBS){
                 cards.remove(i);
+                i = -1;
             }
         }
     }
 
     public void offset(){
         score -= 5;
+    }
+
+    public void clearCube(){
+        for(int i = 0; i < cards.size(); i++){
+            if(cards.get(i).getSuit() == Suit.CLUBS){
+                cards.remove(i);
+                i = -1;
+            }
+        }
+        count = 0;
     }
 
     

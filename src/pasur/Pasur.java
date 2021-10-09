@@ -242,11 +242,11 @@ public class Pasur
                     // give remaining cards in the pool to the last player who picked up a card
 
                     List<Card> poolCards = poolHand.getCardList();
-                    if(!poolCards.isEmpty())
+                    if(!poolCards.isEmpty()){
                         lastPlayerWhoPickedAcard.score.UpdateCards(poolCards);
                         log.writeToLog(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game\n");
                         System.out.println(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game");
-
+                    }
                     cardList.clear();
                     for(int i = 0; i < poolCards.size(); i++)
                     {
@@ -269,6 +269,10 @@ public class Pasur
             if(currentStartingPlayerPos == nPlayers)
                 currentStartingPlayerPos = 0;
             log.writeToLog("Round " + roundOfGame + " of the game ends...\n");
+            for(int i = 0; i < nPlayers; i++)
+            {
+                players[i].score.clearCube();
+            }
             System.out.println("Round " + roundOfGame + " of the game ends...");
 
             List<Player> playersWithEnoughScore = null;
