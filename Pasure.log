@@ -12,163 +12,216 @@ Dealing out to pool...
 Pool: [9-S, 8-C, 7-D, 6-S]
 Player0 plays J-S
 Player0 picks [J-S, 9-S, 8-C, 7-D, 6-S]
-Total Running Scores: Player0 = 0 (0 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 1 (0 Surs)        Player1 = 0 (0 Surs)
 Player1 plays A-S
 Player1 picks []
-Total Running Scores: Player0 = 0 (0 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 1 (0 Surs)        Player1 = 0 (0 Surs)
 Player0 plays 10-S
 Player0 picks [A-S, 10-S]
 Player0 scores a sur
-Total Running Scores: Player0 = 0 (1 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 7 (1 Surs)        Player1 = 0 (0 Surs)
 Player1 plays 3-S
 Player1 picks []
-Total Running Scores: Player0 = 0 (1 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 7 (1 Surs)        Player1 = 0 (0 Surs)
 Player0 plays 4-D
 Player0 picks []
-Total Running Scores: Player0 = 0 (1 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 7 (1 Surs)        Player1 = 0 (0 Surs)
 Player1 plays A-H
 Player1 picks []
-Total Running Scores: Player0 = 0 (1 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 7 (1 Surs)        Player1 = 0 (0 Surs)
 Player0 plays 3-H
 Player0 picks [A-H, 4-D, 3-H, 3-S]
 Player0 scores a sur
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 0 (0 Surs)
 Player1 plays 4-S
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 0 (0 Surs)
 Dealing out to players...
 Player0 hand: [8-H, 7-S, 5-S, 4-H]
 Player1 hand: [K-D, Q-S, J-C, 6-C]
 Player0 plays 5-S
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 0 (0 Surs)
 Player1 plays J-C
 Player1 picks [J-C, 5-S, 4-S]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 8-H
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays K-D
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 7-S
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays 6-C
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 4-H
 Player0 picks [7-S, 4-H]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays Q-S
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Dealing out to players...
 Player0 hand: [6-H, 3-C, 3-D, 2-S]
 Player1 hand: [K-H, Q-D, Q-H, 10-D]
 Player0 plays 6-H
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays K-H
 Player1 picks [K-D, K-H]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 3-C
 Player0 picks [8-H, 3-C]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays Q-D
 Player1 picks [Q-D, Q-S]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 2-S
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays Q-H
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 3-D
 Player0 picks [6-C, 3-D, 2-S]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays 10-D
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 13 (2 Surs)        Player1 = 1 (0 Surs)
 Dealing out to players...
 Player0 hand: [J-D, 9-C, 8-S, 4-C]
 Player1 hand: [A-C, K-C, J-H, 6-D]
 Player0 plays J-D
 Player0 picks [J-D, 10-D, 6-H]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays A-C
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 9-C
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays 6-D
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 8-S
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays K-C
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 17 (2 Surs)        Player1 = 1 (0 Surs)
 Player0 plays 4-C
 Player0 picks [A-C, 6-D, 4-C]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 1 (0 Surs)
 Player1 plays J-H
 Player1 picks [J-H, 9-C, 8-S]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Dealing out to players...
 Player0 hand: [10-C, 9-H, 7-H, 5-D]
 Player1 hand: [A-D, 9-D, 7-C, 5-C]
 Player0 plays 5-D
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Player1 plays 9-D
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Player0 plays 7-H
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Player1 plays 5-C
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Player0 plays 10-C
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 2 (0 Surs)
 Player1 plays A-D
 Player1 picks [A-D, 5-C, 5-D]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Player0 plays 9-H
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Player1 plays 7-C
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Dealing out to players...
 Player0 hand: [Q-C, 8-D, 5-H, 2-D]
 Player1 hand: [K-S, 10-H, 2-C, 2-H]
 Player0 plays 2-D
 Player0 picks [9-D, 2-D]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Player1 plays K-S
 Player1 picks [K-C, K-S]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Player0 plays 8-D
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 3 (0 Surs)
 Player1 plays 2-C
 Player1 picks [9-H, 2-C]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 5 (0 Surs)
 Player0 plays 5-H
 Player0 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 5 (0 Surs)
 Player1 plays 10-H
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 5 (0 Surs)
 Player0 plays Q-C
 Player0 picks [Q-C, Q-H]
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 5 (0 Surs)
 Player1 plays 2-H
 Player1 picks []
-Total Running Scores: Player0 = 0 (2 Surs)        Player1 = 0 (0 Surs)
+Total Running Scores: Player0 = 18 (2 Surs)        Player1 = 5 (0 Surs)
 Player0 picks [10-C, 10-H, 8-D, 7-C, 7-H, 5-H, 2-H] at the end of this round of game
+Total Running Scores: Player0 = 25 (2 Surs)        Player1 = 5 (0 Surs)
+Round 1 of the game ends...
+Round 2 of the game starts...
+Total Running Scores: Player0 = 25 (0 Surs)        Player1 = 5 (0 Surs)
+Dealing out to players...
+Player1 hand: [8-D, 7-H, 5-C, 3-D]
+Player0 hand: [10-D, 7-S, 6-D, 2-D]
+Dealing out to pool...
+Pool: [A-D, Q-C, 10-H, 4-C]
+Player1 plays 7-H
+Player1 picks [7-H, 4-C]
+Total Running Scores: Player0 = 25 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays 10-D
+Player0 picks [A-D, 10-D]
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player1 plays 3-D
+Player1 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays 2-D
+Player0 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player1 plays 8-D
+Player1 picks [8-D, 3-D]
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays 6-D
+Player0 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player1 plays 5-C
+Player1 picks [6-D, 5-C]
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays 7-S
+Player0 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Dealing out to players...
+Player1 hand: [K-S, 8-S, 4-H, 2-S]
+Player0 hand: [Q-D, Q-H, 9-S, 4-S]
+Player1 plays 4-H
+Player1 picks [7-S, 4-H]
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays Q-D
+Player0 picks [Q-C, Q-D]
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player1 plays K-S
+Player1 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays Q-H
+Player0 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player1 plays 8-S
+Player1 picks []
+Total Running Scores: Player0 = 29 (0 Surs)        Player1 = 5 (0 Surs)
+Player0 plays 9-S
+P

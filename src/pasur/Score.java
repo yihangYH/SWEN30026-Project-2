@@ -2,6 +2,9 @@ package pasur;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import ch.aplu.jcardgame.Card;
 
 public class Score {
@@ -33,29 +36,37 @@ public class Score {
             if(cards.get(i).getSuit() == Suit.DIAMONDS && cards.get(i).getValue() ==10 ){
                 score += 3;
                 cards.remove(i);
-                i = 0;
+                i = -1;
             }else if(cards.get(i).getSuit() == Suit.CLUBS && cards.get(i).getValue() ==2){
                 score += 2;
                 cards.remove(i);
                 count ++;
-                i =0;
+                i =-1;
             }else if(cards.get(i).getValue() == 1 || cards.get(i).getValue() == 11){
                 score += 1;
                 if(cards.get(i).getSuit() == Suit.CLUBS){
                     count++;
                 }
                 cards.remove(i);
-                i = 0;
+                i = -1;
             }
 
         }
-        
+        cards = cards.stream().distinct().collect(Collectors.toList());
         if(checkCube()){
             score+=7;
         }
         
     }
-
+    // private ArrayList<Card> removeDuplicate(ArrayList<Card> cards){
+    //     ArrayList<Card> newCards = new ArrayList<>();
+    //     for(Card card : cards){
+    //         if(!newCards.contains(card)){
+    //             newCards.add(card);
+    //         }
+    //     }
+    //     return newCards;
+    // }
     private boolean checkCube(){
         int c = 0;
         for(int i =0 ;i < cards.size(); i++){
@@ -67,6 +78,7 @@ public class Score {
             for(int i = 0 ; i < cards.size(); i++){
                 if(cards.get(i).getSuit() == Suit.CLUBS){
                     cards.remove(i);
+                    i = -1;
                 }
             }
             count = 0;
