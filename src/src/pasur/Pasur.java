@@ -16,6 +16,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import Strategies.*;
+
 public class Pasur
 {
     public static final String VERSION = "1.0";
@@ -39,12 +41,16 @@ public class Pasur
     private final Hand poolHand;
     private final Player[] players;
     // get instance from Log.java
-    private Log log = Log.getInstance();
+    private final Log log = Log.getInstance();
     private PropertyChangeSupport propertyChangePublisher = new PropertyChangeSupport(this);
-
+    // initialize CompsiteStrategy
+    private CompositeStrategy compositeStrategy = new CompositeStrategy();
+    
     public Pasur(int nPlayers) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException,
             InstantiationException
     {
+        // add all strategies into compsiteStrategy
+        compositeStrategy.addStraegy();
         // Instantiate players
         this.nPlayers = nPlayers;
 
@@ -97,7 +103,6 @@ public class Pasur
             return;
         gameStarted = true;
         log.writeToLog("Game starts...\n");
-        System.out.println("Game starts...");
         
         Player winner = null;
 
@@ -109,7 +114,6 @@ public class Pasur
         {
             roundOfGame++;
             log.writeToLog("Round " + roundOfGame + " of the game starts...\n");
-            System.out.println("Round " + roundOfGame + " of the game starts...");
 
             boolean isFirstRound = true;
             reset();
@@ -177,15 +181,15 @@ public class Pasur
                                 card.setVerso(true);
                             }
                             log.writeToLog(player.toString() + " picks " + toString(cardList) + "\n");
-                            System.out.println(player.toString() + " picks " + toString(cardList));
+                            
 
                             if(isAsur(playedCard, isLastRound))
                             {
                                 // player has a sur. If the other players have a sur this sur will be used to remove one of their surs.
                                 // otherwise it will be added as a sur for this player
                                 log.writeToLog(player.toString() + " scores a sur\n");
-                                System.out.println(player.toString() + " scores a sur");
-                                player.score.sur();
+                               
+                                
                                 int nOtherPlayersWithSure = 0;
                                 for(int r = 0; r < nPlayers; r++)
                                 {
@@ -206,7 +210,8 @@ public class Pasur
                                             Card surCard = otherPlayer.getSurs().get(otherPlayer.getSurs().getNumberOfCards() - 1);
                                             cardList.clear();
                                             cardList.add(surCard);
-                                            player.score.offset();
+                                            // otherPlayer.setCurrentscore(player.getCurrentscore() - 5);
+                                            
                                             transfer(cardList, otherPlayer.getPickedCards(), false);
                                             surCard.setVerso(true);
                                         }
@@ -223,7 +228,7 @@ public class Pasur
                         }else
                         {
                             log.writeToLog(player.toString() + " picks " + toString(cardsToPick) + "\n");
-                            System.out.println(player.toString() + " picks " + toString(cardsToPick));
+                           
 
                             // the played card of the player can't pick any card, so we have to leave it at the pool
                         }
@@ -243,9 +248,8 @@ public class Pasur
 
                     List<Card> poolCards = poolHand.getCardList();
                     if(!poolCards.isEmpty()){
-                        lastPlayerWhoPickedAcard.score.UpdateCards(poolCards);
                         log.writeToLog(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game\n");
-                        System.out.println(lastPlayerWhoPickedAcard + " picks " + toString(poolCards) + " at the end of this round of game");
+                        
                     }
                     cardList.clear();
                     for(int i = 0; i < poolCards.size(); i++)
@@ -261,25 +265,23 @@ public class Pasur
                     transfer(cardList, lastPlayerWhoPickedAcard.getPickedCards(), false);
                     
                 }
+                
             }
 
             updateScores();
-
+            // if the round is end update each players' score
+            for(int i = 0 ; i < nPlayers; i++ ){
+                players[i].setRoundScore(players[i].getFinalScore());
+            }
             currentStartingPlayerPos++;
             if(currentStartingPlayerPos == nPlayers)
                 currentStartingPlayerPos = 0;
             log.writeToLog("Round " + roundOfGame + " of the game ends...\n");
-            for(int i = 0; i < nPlayers; i++)
-            {
-                players[i].score.clearCube();
-            }
-            System.out.println("Round " + roundOfGame + " of the game ends...");
-
             List<Player> playersWithEnoughScore = null;
             for(int i = 0; i < nPlayers; i++)
             {
                 Player player = players[i];
-                if(player.getScore() >= SCORE_TO_WIN)
+                if(player.getFinalScore() >= SCORE_TO_WIN)
                 {
                     if(playersWithEnoughScore == null)
                         playersWithEnoughScore = new ArrayList<>();
@@ -296,8 +298,8 @@ public class Pasur
                 if(playersWithEnoughScore.size() > 1)
                 {
                     // there are more than one player with the score above the threshold
-                    playersWithEnoughScore.sort((o1, o2) -> -Integer.compare(o1.getScore(), o2.getScore()));
-                    if(playersWithEnoughScore.get(0).getScore() == playersWithEnoughScore.get(1).getScore())
+                    playersWithEnoughScore.sort((o1, o2) -> -Integer.compare(o1.getFinalScore(), o2.getFinalScore()));
+                    if(playersWithEnoughScore.get(0).getFinalScore() == playersWithEnoughScore.get(1).getFinalScore())
                     {
                         // the score of the top two players are the same, so we have to play another round
                         continue;
@@ -309,14 +311,14 @@ public class Pasur
             }
         }
         log.writeToLog("Game ends...\n");
-        System.out.println("Game ends...");
+        
 
         String winningText = winner.toString() + " is the winner!";
 
         propertyChangePublisher.firePropertyChange(ON_GAME_END, null, winningText);
         log.writeToLog(winningText + "\n");
         log.closeLog();
-        System.out.println(winningText);
+        
         
     }
 
@@ -331,7 +333,6 @@ public class Pasur
                 return true;
             }
         }
-
         return false;
     }
 
@@ -365,12 +366,15 @@ public class Pasur
                 scoreString += "        ";
 
             Player player = players[i];
-            scoreString += player.toString() + " = " + player.getScore() + " (" + player.getSurs().getNumberOfCards() + " Surs)";
+            // get score based on the scoring strategy
+            int score = compositeStrategy.getScore(player.pickedCards, player.surs);
+            // set final score to the current round score
+            // final score will keep update untill game finshed
+            player.setFinalScore(player.getRoundScore()+score);
+            scoreString += player.toString() + " = " + (player.getRoundScore() + score) + " (" + player.getSurs().getNumberOfCards() + " Surs)";
         }
 
         propertyChangePublisher.firePropertyChange(ON_UPDATE_SCORE, null, scoreString);
-//        scoreLabel.setText(scoreString);
-        System.out.println("Total Running Scores: " + scoreString);
         log.writeToLog("Total Running Scores: " + scoreString + "\n");
         
     }
@@ -378,8 +382,7 @@ public class Pasur
     private void dealingOutToPlayers(int currentStartingPlayerPos)
     {
         log.writeToLog("Dealing out to players...\n");
-        System.out.println("Dealing out to players...");
-
+        
         List<Card> cardList = new ArrayList<>(1);
         for (int i = 0, k = currentStartingPlayerPos; i < nPlayers; i++)
         {
@@ -406,7 +409,7 @@ public class Pasur
             if(k == nPlayers)
                 k = 0;
 
-            System.out.println(player.toString() + " hand: " + toString(player.getHand().getCardList()));
+           
             log.writeToLog(player.toString() + " hand: " + toString(player.getHand().getCardList()) + "\n");
         }
     }
@@ -414,7 +417,7 @@ public class Pasur
     private void dealingOutToPool()
     {
         log.writeToLog("Dealing out to pool...\n");
-        System.out.println("Dealing out to pool...");
+       
 
         List<Card> cardList = new ArrayList<>(1);
         for (int i = 0; i < N_HAND_CARDS; i++)
@@ -439,7 +442,7 @@ public class Pasur
             }
         }
         log.writeToLog("Pool: " + toString(poolHand.getCardList()) + "\n");
-        System.out.println("Pool: " + toString(poolHand.getCardList()));
+        
         
     }
 

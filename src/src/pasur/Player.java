@@ -14,12 +14,13 @@ public abstract class Player
 {
     private static final int TARGET_VALUE = 11;
     // get instance from Log.java
-    private Log log = Log.getInstance();
+    private final Log log = Log.getInstance();
     protected int id;
     protected Hand hand;
     protected Hand pickedCards;
     protected Hand surs;
-    protected Score score = new Score();
+    protected int roundScore;
+    protected int finalScore;
     protected Player(int id)
     {
         this.id = id;
@@ -36,7 +37,7 @@ public abstract class Player
         Set<Card> cardsToPick = null;
         if(playedCard != null)
         {
-            System.out.println(toString() + " plays " + Pasur.toString(playedCard));
+            
             log.writeToLog(toString() + " plays " + Pasur.toString(playedCard)+"\n");
             cardsToPick = pickCards(pool, playedCard);
         }
@@ -66,7 +67,7 @@ public abstract class Player
             if(check){
                 pickedCard.add(playedCard);
             }
-            score.UpdateCards(pickedCard);
+            
         }else if(playedCard.getRank() == Rank.KING || playedCard.getRank() == Rank.QUEEN)
         {
             Card candidateCardToPick = null;
@@ -89,7 +90,6 @@ public abstract class Player
                 cardsToPick.add(candidateCardToPick);
                 pickedCard.add(candidateCardToPick);
                 pickedCard.add(playedCard);
-                score.UpdateCards(pickedCard);
             }
         }else
         {
@@ -108,7 +108,7 @@ public abstract class Player
                         pickedCard.add(card);
                     }
                     pickedCard.add(playedCard);
-                    score.UpdateCards(pickedCard);
+                   
                 }
             }
         }
@@ -244,12 +244,33 @@ public abstract class Player
         return "Player" + id;
     }
 
-    public int getScore()
-    {
-        
-        return score.getScore();
+       
+    /**
+     * @return roundScore
+     */
+    public int getRoundScore() {
+        return roundScore;
     }
-    
-    
+    /**
+     * set the current round score to this.roundScore
+     * @param roundScore current round score
+     */
+    public void setRoundScore(int roundScore) {
+        this.roundScore = roundScore;
+    }
+    /**
+     * @return final score
+     */
+    public int getFinalScore() {
+        return finalScore;
+    }
+    /**
+     * set the final score to this.finalScore
+     * @param finalScore current final score
+     */
+    public void setFinalScore(int finalScore) {
+        this.finalScore = finalScore;
+    }
+
     abstract Card selectToPlay();
 }
